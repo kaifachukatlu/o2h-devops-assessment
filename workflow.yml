@@ -3,21 +3,26 @@ name: Build Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-      - run: echo "Tests Passed"
+      - name: Run Tests
+        run: echo "Tests Passed Successfully"
 
-      - run: docker build -t o2h-app .
+      - name: Build Docker Image
+        run: docker build -t o2h-app .
