@@ -5,9 +5,11 @@
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## 📖 Overview
+---
 
-This repository contains my submission for the **O2H DevOps Fresher Assessment**. The assessment demonstrates fundamental knowledge of:
+# 📖 Overview
+
+This repository contains my submission for the **O2H DevOps Fresher Assessment**. The assessment focuses on:
 
 * Git & GitHub
 * Linux Administration
@@ -18,39 +20,93 @@ This repository contains my submission for the **O2H DevOps Fresher Assessment**
 
 ---
 
-# 🛠 Technologies Used
-
-* Git
-* GitHub
-* Node.js
-* Express.js
-* Docker
-* GitHub Actions
-* Linux
-* Bash
-
----
-
 # 📂 Project Structure
 
 ```text
 o2h-devops-assessment/
 │
 ├── README.md
-├── app.js
-├── package.json
-├── package-lock.json
 ├── Dockerfile
 ├── Linux_Commands.md
 ├── script.sh
 ├── workflow.yml
+├── app.js
+├── package.json
+├── package-lock.json
 ├── .gitignore
 └── screenshots/
 ```
 
 ---
 
-# 🌐 Application
+# 1️⃣ Task 1: Git & GitHub
+
+## Git Workflow
+
+* Initialized a local Git repository.
+* Added project files.
+* Created feature branch:
+
+```text
+feature/homepage
+```
+
+* Updated README.
+* Committed changes.
+* Merged feature branch into master.
+* Pushed code to GitHub.
+
+### Repository
+
+```text
+https://github.com/kaifachukatlu/o2h-devops-assessment
+```
+
+---
+
+# 2️⃣ Task 2: Linux Administration
+
+### Display Current User
+
+```bash
+whoami
+```
+
+### Show Disk Usage
+
+```bash
+df -h
+```
+
+### Show Memory Usage
+
+```bash
+free -m
+```
+
+### Find All .log Files
+
+```bash
+find . -name "*.log"
+```
+
+### Create Backup Folder
+
+```bash
+mkdir backup
+```
+
+### Compress Directory
+
+```bash
+tar -czvf backup.tar.gz project/
+```
+
+---
+
+# 3️⃣ Task 3: Dockerization
+
+## Application
 
 A simple Node.js Express application that displays:
 
@@ -58,7 +114,7 @@ A simple Node.js Express application that displays:
 Hello from o2h DevOps Assessment
 ```
 
-Run the application:
+### Run Application
 
 ```bash
 npm install
@@ -70,10 +126,6 @@ Access:
 ```text
 http://localhost:3000
 ```
-
----
-
-# 🐳 Docker
 
 ## Dockerfile
 
@@ -95,13 +147,13 @@ CMD ["node", "app.js"]
 
 ## Docker Commands
 
-Build Docker Image:
+Build image:
 
 ```bash
 docker build -t o2h-app .
 ```
 
-Run Docker Container:
+Run container:
 
 ```bash
 docker run -p 3000:3000 o2h-app
@@ -109,86 +161,29 @@ docker run -p 3000:3000 o2h-app
 
 ---
 
-# ⚙️ CI/CD Workflow
+# 4️⃣ Task 4: CI/CD Pipeline
 
 Implemented using GitHub Actions.
 
-Pipeline Flow:
+### Workflow
 
 ```text
 Developer Push
-      ↓
+       ↓
 GitHub
-      ↓
+       ↓
 Build
-      ↓
+       ↓
 Install Dependencies
-      ↓
+       ↓
 Run Tests
-      ↓
+       ↓
 Docker Build
 ```
 
 ---
 
-# 🌿 Git Workflow
-
-* Initialized local Git repository.
-* Added project files.
-* Created feature branch:
-
-```text
-feature/homepage
-```
-
-* Modified README.
-* Committed changes.
-* Merged feature branch into master.
-* Pushed code to GitHub.
-
----
-
-# 🐧 Linux Commands
-
-Current User:
-
-```bash
-whoami
-```
-
-Disk Usage:
-
-```bash
-df -h
-```
-
-Memory Usage:
-
-```bash
-free -m
-```
-
-Find Log Files:
-
-```bash
-find . -name "*.log"
-```
-
-Create Backup Folder:
-
-```bash
-mkdir backup
-```
-
-Compress Directory:
-
-```bash
-tar -czvf backup.tar.gz project/
-```
-
----
-
-# 📜 Bash Script
+# 🎁 Bonus Task: Bash Script
 
 ```bash
 #!/bin/bash
@@ -204,17 +199,30 @@ echo "Backup completed successfully"
 
 # 📸 Screenshots
 
-The `screenshots/` folder contains:
+The screenshots folder contains:
 
-* Application output
-* Project structure
-* Repository screenshots
+* Application Output
+* Project Structure
+* Repository Screenshots
+
+---
+
+# 🛠 Technologies Used
+
+* Git
+* GitHub
+* Linux
+* Node.js
+* Express.js
+* Docker
+* GitHub Actions
+* Bash
 
 ---
 
 # 👨‍💻 Author
 
-**Kaif**
+### Kaif
 
 GitHub: https://github.com/kaifachukatlu
 
