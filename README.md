@@ -1,26 +1,24 @@
-# O2H DevOps Assessment
+# 🚀 O2H DevOps Assessment
 
-Completed by **Kaif**
+![Node.js](https://img.shields.io/badge/Node.js-18-green)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-orange)
+![License](https://img.shields.io/badge/Status-Completed-success)
 
-## 📌 Overview
+## 📖 Overview
 
-This repository contains the solutions for the **O2H DevOps Fresher Assessment**. The assessment covers Git & GitHub, Linux fundamentals, Docker, CI/CD concepts, troubleshooting, and Bash scripting.
-
----
-
-## 🚀 Technologies Used
+This repository contains my submission for the **O2H DevOps Fresher Assessment**. The assessment demonstrates fundamental knowledge of:
 
 * Git & GitHub
-* Node.js
-* Express.js
+* Linux Administration
 * Docker
-* GitHub Actions
-* Linux Commands
+* CI/CD concepts
 * Bash Scripting
+* Troubleshooting
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 o2h-devops-assessment/
@@ -39,17 +37,34 @@ o2h-devops-assessment/
 
 ---
 
-## 🌐 Application
+# 🛠 Technologies Used
 
-### app.js
+* Git & GitHub
+* Node.js
+* Express.js
+* Docker
+* GitHub Actions
+* Linux Commands
+* Bash
 
-The application is a simple Express server that returns:
+---
 
-```text
-Hello from o2h DevOps Assessment
+# 🌐 Application
+
+Simple Node.js Express server:
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello from o2h DevOps Assessment');
+});
+
+app.listen(3000);
 ```
 
-The application runs on:
+Application runs at:
 
 ```text
 http://localhost:3000
@@ -57,7 +72,7 @@ http://localhost:3000
 
 ---
 
-## 🐳 Docker
+# 🐳 Docker
 
 ### Dockerfile
 
@@ -77,15 +92,15 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 ```
 
-### Docker Commands
+### Commands
 
-Build Docker image:
+Build image:
 
 ```bash
 docker build -t o2h-app .
 ```
 
-Run Docker container:
+Run container:
 
 ```bash
 docker run -p 3000:3000 o2h-app
@@ -93,63 +108,58 @@ docker run -p 3000:3000 o2h-app
 
 ---
 
-## ⚙️ CI/CD Pipeline
-
-A basic GitHub Actions workflow has been created.
-
-Pipeline flow:
+# ⚙ CI/CD Workflow
 
 ```text
 Developer Push
-       ↓
+      ↓
 GitHub
-       ↓
+      ↓
 Build
-       ↓
+      ↓
 Install Dependencies
-       ↓
+      ↓
 Run Tests
-       ↓
+      ↓
 Docker Build
 ```
 
+Implemented using **GitHub Actions**.
+
 ---
 
-## 🌿 Git Branching Strategy
+# 🌿 Git Workflow
 
-### Branch Created
+* Created local repository.
+* Added project files.
+* Created branch:
 
 ```text
 feature/homepage
 ```
 
-Workflow followed:
-
-1. Created local repository.
-2. Added project files.
-3. Created feature branch.
-4. Modified README.
-5. Committed changes.
-6. Merged into master branch.
-7. Pushed to GitHub.
+* Updated README.
+* Committed changes.
+* Merged branch into master.
+* Pushed code to GitHub.
 
 ---
 
-## 🐧 Linux Commands
+# 🐧 Linux Commands
 
-Display current user:
+Current user:
 
 ```bash
 whoami
 ```
 
-Show disk usage:
+Disk usage:
 
 ```bash
 df -h
 ```
 
-Show memory usage:
+Memory usage:
 
 ```bash
 free -m
@@ -175,7 +185,7 @@ tar -czvf backup.tar.gz project/
 
 ---
 
-## 📜 Bash Script
+# 📜 Bash Script
 
 ```bash
 #!/bin/bash
@@ -189,16 +199,16 @@ echo "Backup completed successfully"
 
 ---
 
-# Troubleshooting
+# 🔧 Troubleshooting
 
 ## Scenario 1: Docker Container Exits Immediately
 
 ### Possible Reasons
 
-* Application crashes during startup.
-* Incorrect CMD instruction.
-* Missing dependencies.
-* Port configuration issue.
+* Application crash
+* Incorrect CMD instruction
+* Missing dependencies
+* Port conflicts
 
 ### Debug Commands
 
@@ -214,11 +224,11 @@ docker exec -it <container_id> sh
 
 ### Things to Check
 
-* Firewall rules.
-* Port accessibility.
-* Environment variables.
-* Dependencies installed.
-* Application logs.
+* Firewall rules
+* Port accessibility
+* Environment variables
+* Dependencies
+* Logs
 
 ### Commands
 
@@ -230,67 +240,50 @@ curl localhost:3000
 
 ---
 
-# Interview Questions
+# 📚 Interview Questions
 
-## Difference between Docker Image and Container
+### Docker Image vs Container
 
-* Docker Image is a blueprint or template.
-* Docker Container is a running instance of an image.
+* Image → Blueprint.
+* Container → Running instance.
 
----
+### What is CI/CD?
 
-## What is CI/CD?
+* Continuous Integration
+* Continuous Deployment
 
-**CI (Continuous Integration):**
+### What Happens During Docker Build?
 
-Automates code integration and testing.
+Docker reads the Dockerfile and creates image layers.
 
-**CD (Continuous Deployment):**
-
-Automates deployment and delivery processes.
-
----
-
-## What Happens During docker build?
-
-Docker reads instructions from the Dockerfile and creates image layers step by step.
-
----
-
-## Difference Between CMD and ENTRYPOINT
+### CMD vs ENTRYPOINT
 
 * CMD provides default commands.
-* ENTRYPOINT makes the container behave like an executable.
+* ENTRYPOINT makes containers executable.
 
----
+### Infrastructure as Code
 
-## What is Infrastructure as Code (IaC)?
+Managing infrastructure through code and automation tools.
 
-Infrastructure as Code is the practice of managing and provisioning infrastructure using code and automation tools such as Terraform and Ansible.
+### GitHub Actions
 
----
+Automates build, test, and deployment workflows.
 
-## How GitHub Actions Work
-
-GitHub Actions automatically run workflows whenever code is pushed to the repository. It helps automate build, test, and deployment tasks.
-
----
-
-## What Would You Automate First in a Software Project?
-
-I would automate:
+### What Would You Automate First?
 
 * Build process
 * Testing process
 * Deployment process
-* Backup and monitoring tasks
+* Monitoring
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-**Kaif**
+### Kaif
 
 GitHub: https://github.com/kaifachukatlu
 
 ---
+
+⭐ Thank you for reviewing my submission.
